@@ -1,0 +1,32 @@
+<header class="header">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-6">
+        <a href="#" class="logo">Logo</a>
+      </div>
+      <div class="col-6 text-end">
+        <button class="hamburger" (click)="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="menu-overlay">
+  <div class="menu-content">
+    <ul class="menu-items">
+      <li><a href="#" (mouseenter)="onHover($event)" (click)="toggleMenu()">Home</a></li>
+      <li><a href="#" (mouseenter)="onHover($event)" (click)="toggleMenu()">About</a></li>
+      <li><a href="#" (mouseenter)="onHover($event)" (click)="toggleMenu()">Products</a></li>
+      <li><a href="#" (mouseenter)="onHover($event)" (click)="toggleMenu()">Contact</a></li>
+    </ul>
+    <div class="social-links">
+      <a href="#" class="me-3">Instagram</a>
+      <a href="#" class="me-3">Twitter</a>
+      <a href="#">Facebook</a>
+    </div>
+  </div>
+</nav>
