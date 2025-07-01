@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f1f9; /* Light purple background inspired by Welch's */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

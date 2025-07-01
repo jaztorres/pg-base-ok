@@ -7,6 +7,27 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Welch's Inspired</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item" *ngFor="let item of menuItems">
+          <a class="nav-link" #navItem [href]="item.link">{{ item.label }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container mt-5">
+  <h1>Welcome to the Welch's Inspired Menu</h1>
+  <p>Explore our vibrant and interactive menu!</p>
+</div>
+
 <style>
   :host {
     --bright-blue: oklch(51.01% 0.274 263.83);
@@ -177,7 +198,7 @@
   }
 </style>
 <header>
-<app-navbar></app-navbar>
+
 </header>
 
 <main class="main">
