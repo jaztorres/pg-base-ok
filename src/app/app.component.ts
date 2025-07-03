@@ -3,28 +3,20 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { gsap } from 'gsap';
 import { Navbar2Component } from './navbar2/navbar2.component';
+import { NavbarComponent } from './navbar/navbar.component';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule, RouterOutlet,Navbar2Component,NavbarComponent,],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent  {
   
 title = 'pg-base';
   
 
-  ngAfterViewInit() {
-    // Initial fade-in animation for the navbar
-    gsap.from('.navbar', {
-      opacity: 0,
-      y: -50,
-      duration: 1,
-      ease: 'power2.inOut'
-    });
-
-    
-  }
+  
 }

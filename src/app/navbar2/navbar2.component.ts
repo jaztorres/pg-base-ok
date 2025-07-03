@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { gsap } from 'gsap';
 
 @Component({
-  selector: 'app-navbar',
+  selector: 'app-navbar2',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './navbar2.component.html',
