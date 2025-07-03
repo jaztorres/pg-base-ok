@@ -20,7 +20,7 @@ opacity: 0;
 /* Responsive adjustments */
 @media (max-width: 991px) {
 .navbar-collapse {
-    background-color: #f8f9fa;
+    background-color: #0d71d4;
     padding: 1rem;
 }
 

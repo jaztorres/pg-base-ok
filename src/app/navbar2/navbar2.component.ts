@@ -9,7 +9,7 @@ import { gsap } from 'gsap';
   templateUrl: './navbar2.component.html',
   styleUrls: ['./navbar2.component.css']
 })
-export class NavbarComponent implements AfterViewInit {
+export class Navbar2Component implements AfterViewInit {
   ngAfterViewInit(): void {
     // GSAP Animation for Logo
     gsap.fromTo(

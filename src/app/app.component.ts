@@ -2,8 +2,7 @@ import { Component, AfterViewInit, ElementRef, QueryList, ViewChildren } from '@
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { gsap } from 'gsap';
-import { NavbarComponent } from './navbar/navbar.component';
-import { SliderComponent } from "./slider/slider.component";
+import { Navbar2Component } from './navbar2/navbar2.component';
 
 @Component({
   selector: 'app-root',
@@ -13,14 +12,9 @@ import { SliderComponent } from "./slider/slider.component";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements AfterViewInit {
-  @ViewChildren('navItem') navItems!: QueryList<ElementRef>;
+  
 title = 'pg-base';
-  menuItems = [
-    { label: 'Home', link: '#' },
-    { label: 'Products', link: '#' },
-    { label: 'About', link: '#' },
-    { label: 'Contact', link: '#' }
-  ];
+  
 
   ngAfterViewInit() {
     // Initial fade-in animation for the navbar
@@ -31,25 +25,6 @@ title = 'pg-base';
       ease: 'power2.inOut'
     });
 
-    // Hover animations for menu items
-    this.navItems.forEach((item) => {
-      const element = item.nativeElement;
-      element.addEventListener('mouseenter', () => {
-        gsap.to(element, {
-          scale: 1.1,
-          color: '#ffcc00',
-          duration: 0.3,
-          ease: 'power1.out'
-        });
-      });
-      element.addEventListener('mouseleave', () => {
-        gsap.to(element, {
-          scale: 1,
-          color: '#ffffff',
-          duration: 0.3,
-          ease: 'power1.out'
-        });
-      });
-    });
+    
   }
 }
