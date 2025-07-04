@@ -1,0 +1,31 @@
+<p>menu works!</p>
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand ms-auto" href="#">
+    <img src="/public/assets/img/logoRepsol.png" alt="Logo" class="logo">
+    </a>
+
+    <!-- Hamburger Button -->
+    <button class="navbar-toggler" type="button" (click)="toggleMenu()" [attr.aria-expanded]="isMenuOpen" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu Items -->
+    <div class="collapse navbar-collapse" [ngClass]="{'show': isMenuOpen}">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#" (click)="closeMenu()">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" (click)="closeMenu()">Mecánica</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" (click)="closeMenu()">Registro</a>
+        </li>
+      </ul>
+      <!-- Close Button for Mobile -->
+      <button class="btn-close btn-close-white d-lg-none" (click)="closeMenu()" aria-label="Close"></button>
+    </div>
+  </div>
+</nav>

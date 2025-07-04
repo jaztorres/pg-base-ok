@@ -4,12 +4,15 @@ import { RouterOutlet } from '@angular/router';
 import { gsap } from 'gsap';
 import { Navbar2Component } from './navbar2/navbar2.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { SliderComponent } from "./slider/slider.component";
+import { MenuComponent } from './menu/menu.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet,Navbar2Component,NavbarComponent,],
+  imports: [CommonModule, RouterOutlet, LandingPageComponent ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
