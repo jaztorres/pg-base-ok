@@ -7,18 +7,22 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SliderComponent } from "./slider/slider.component";
 import { MenuComponent } from './menu/menu.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { HeroComponent } from './hero/hero.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, SliderComponent ],
+  imports: [RouterOutlet, HeroComponent, ProjectsComponent,FooterComponent ],
+
+
+
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+styleUrls: ['./app.component.css']
 })
 export class AppComponent  {
-  
-title = 'pg-base';
   
 
   
