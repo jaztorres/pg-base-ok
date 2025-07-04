@@ -15,11 +15,11 @@ import { FooterComponent } from './footer/footer.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeroComponent, ProjectsComponent,FooterComponent ],
+  imports: [RouterOutlet, HeroComponent, ProjectsComponent,FooterComponent,NavbarComponent, ],
 
 
 
-  templateUrl: './app.component.html',
+templateUrl: './app.component.html',
 styleUrls: ['./app.component.css']
 })
 export class AppComponent  {
