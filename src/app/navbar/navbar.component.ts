@@ -1,14 +1,17 @@
+import { CommonModule, NgClass } from '@angular/common';
 import { Component, OnInit, HostListener, ElementRef, Renderer2 } from '@angular/core';
 import { gsap } from 'gsap';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
+  imports:[CommonModule, NgClass],
   templateUrl:'./navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrl: './navbar.component.css'
 })
-export class NavbarComponent {
+export class NavbarComponent  {
   isMenuOpen = false;
+  private offcanvas: any;
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;

@@ -13,7 +13,7 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="https://welchsfruitsnacks.com/wp-content/uploads/2023/04/Welchs_Logo_FruitSnacks.png" alt="Logo">
+        <img src="/public/assets/img/logoRepsol.png" alt="Logo">
       </a>
       <button class="hamburger" type="button" (click)="toggleMenu()">
         <i class="fas fa-bars"></i>
@@ -37,7 +37,7 @@
     </div>
   </nav>
 
-<div class="offcanvas offcanvas-end"  id="mobileMenu" [ngClass]="{'': isMenuOpen}">
+<div class="offcanvas offcanvas-end"  id="mobileMenu" [ngClass]="{'show': isMenuOpen}">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title">Menu</h5>
       <button type="button" class="btn-close" (click)="toggleMenu()"></button>
