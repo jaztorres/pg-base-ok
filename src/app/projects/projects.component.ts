@@ -52,3 +52,8 @@ export class ProjectsComponent implements AfterViewInit {
     imgElement.src = '/public/favicon.ico'; // Fallback image
   }
 }
+
+
+
+
+  

@@ -1,9 +1,7 @@
-<section class="slider-wrapper">
-  <button class="slide-arrow" id="slide-arrow-prev" (click)="prevSlide()">&#8249;</button>
-  <button class="slide-arrow" id="slide-arrow-next" (click)="nextSlide()">&#8250;</button>
-  <ul class="slides-container" id="slides-container" [style.transform]="transformStyle">
-    <li class="slide" *ngFor="let slide of slides; let i = index" [class.active]="i === currentSlide">
-      <img [src]="slide.src" [alt]="slide.alt" />
-    </li>
-  </ul>
-</section>
+<div class="slider-container">
+  <div class="slider-wrapper" [ngStyle]="{'transform': transformStyle}">
+    <img *ngFor="let slide of slides" [src]="slide.src" [alt]="slide.alt" class="slide-image">
+  </div>
+  <button class="prev-button" (click)="prevSlide()">&#10094;</button>
+  <button class="next-button" (click)="nextSlide()">&#10095;</button>
+</div>

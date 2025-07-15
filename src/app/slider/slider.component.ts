@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { NgStyle, NgFor } from '@angular/common'; // Importa NgStyle y NgFor
 
 @Component({
   selector: 'app-slider',
   standalone: true,
-  imports:[],
+  imports:[NgStyle, NgFor], // Agrega NgStyle y NgFor aquí
   templateUrl: './slider.component.html',
   styleUrls: ['./slider.component.css'],
 })
@@ -14,7 +15,10 @@ export class SliderComponent implements OnInit {
     { src: 'https://picsum.photos/id/3/800/400', alt: 'Slide 3' },
   ];
   currentSlide = 0;
-  transformStyle = 'translateX(0px)';
+  transformStyle = 'translateX(0px)'; // Esto se actualizará dinámicamente
+
+  // Define el ancho de la diapositiva para usarlo en el cálculo
+  slideWidth = 800; // Asegúrate de que esto coincida con el ancho de tus imágenes o contenedor
 
   ngOnInit(): void {
     this.updateSlider();
@@ -31,7 +35,7 @@ export class SliderComponent implements OnInit {
   }
 
   private updateSlider(): void {
-    const slideWidth = 800; // Ancho de cada diapositiva (ajusta según tu diseño)
-    //this.transformStyle = translateX(-${this.currentSlide * slideWidth}px);
+    // Calcula el desplazamiento horizontal necesario
+    this.transformStyle = `translateX(-${this.currentSlide * this.slideWidth}px)`;
   }
 }

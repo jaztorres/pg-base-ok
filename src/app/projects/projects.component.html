@@ -44,7 +44,7 @@
     </div>
   </div>
 </section>-->
-
+<!--
 <section class="projects py-5 bg-dark text-white" id="projects">
   <div class="container">
     <h2 class="text-center mb-5 display-4 fw-bold">Our Projects</h2>
@@ -61,4 +61,19 @@
       </div>
     </div>
   </div>
-</section>
+</section>-->
+
+<div id="projects">
+  <h2>Our Projects</h2>
+  <div class="projects-grid">
+    <div *ngFor="let project of projects" class="project-card animate-card">
+      <img
+        [src]="project.image"
+        alt="{{ project.title }}"
+        (error)="handleImageError($event)"
+      />
+      <h3>{{ project.title }}</h3>
+      <p>{{ project.description }}</p>
+    </div>
+  </div>
+</div>

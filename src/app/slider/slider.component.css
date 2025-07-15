@@ -1,57 +1,41 @@
+.slider-container {
+  width: 800px; /* Asegúrate de que esto coincida con slideWidth en TS */
+  height: 400px; /* Altura de tus imágenes */
+  overflow: hidden; /* Esto es crucial para ocultar las imágenes fuera de vista */
+  position: relative; /* Para posicionar los botones si es necesario */
+  margin: auto; /* Centrar el slider */
+}
+
 .slider-wrapper {
-  position: relative;
-  max-width: 800px;
-  margin: 0 auto;
-  overflow: hidden;
+  display: flex; /* Para que las imágenes se coloquen una al lado de la otra */
+  transition: transform 0.5s ease-in-out; /* Animación suave al cambiar de slide */
 }
 
-.slides-container {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: 100%;
+.slide-image {
+  width: 800px; /* Ancho de cada imagen, debe coincidir con slideWidth */
+  height: 400px; /* Altura de cada imagen */
+  flex-shrink: 0; /* Evita que las imágenes se encojan */
+  object-fit: cover; /* Para que las imágenes se ajusten y cubran el espacio */
 }
 
-.slide {
-  flex: 0 0 100%;
-  width: 800px;
-  height: 400px;
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.slide-arrow {
+.prev-button,
+.next-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
-  padding: 10px;
+  padding: 10px 15px;
   cursor: pointer;
-  font-size: 24px;
+  z-index: 10;
+  font-size: 20px;
 }
 
-#slide-arrow-prev {
+.prev-button {
   left: 10px;
 }
 
-#slide-arrow-next {
+.next-button {
   right: 10px;
-}
-
-.slide.active {
-  /* Estilos opcionales para la diapositiva activa */
-   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 24px;
 }
