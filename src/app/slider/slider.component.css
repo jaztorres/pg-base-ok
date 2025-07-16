@@ -1,5 +1,5 @@
 .slider-container {
-  width: 800px; /* Asegúrate de que esto coincida con slideWidth en TS */
+  width: 1890px; /* Asegúrate de que esto coincida con slideWidth en TS */
   height: 400px; /* Altura de tus imágenes */
   overflow: hidden; /* Esto es crucial para ocultar las imágenes fuera de vista */
   position: relative; /* Para posicionar los botones si es necesario */
@@ -12,7 +12,7 @@
 }
 
 .slide-image {
-  width: 800px; /* Ancho de cada imagen, debe coincidir con slideWidth */
+  width: 1890px; /* Ancho de cada imagen, debe coincidir con slideWidth */
   height: 400px; /* Altura de cada imagen */
   flex-shrink: 0; /* Evita que las imágenes se encojan */
   object-fit: cover; /* Para que las imágenes se ajusten y cubran el espacio */
