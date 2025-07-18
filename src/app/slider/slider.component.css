@@ -1,5 +1,5 @@
 .slider-container {
-  width: 1890px; /* Asegúrate de que esto coincida con slideWidth en TS */
+  width: 1600x; /* Asegúrate de que esto coincida con slideWidth en TS */
   height: 400px; /* Altura de tus imágenes */
   overflow: hidden; /* Esto es crucial para ocultar las imágenes fuera de vista */
   position: relative; /* Para posicionar los botones si es necesario */
@@ -12,7 +12,7 @@
 }
 
 .slide-image {
-  width: 1890px; /* Ancho de cada imagen, debe coincidir con slideWidth */
+  width: 1600px; /* Ancho de cada imagen, debe coincidir con slideWidth */
   height: 400px; /* Altura de cada imagen */
   flex-shrink: 0; /* Evita que las imágenes se encojan */
   object-fit: cover; /* Para que las imágenes se ajusten y cubran el espacio */
@@ -23,13 +23,15 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(146, 230, 12, 0.979);
   color: white;
   border: none;
   padding: 10px 15px;
   cursor: pointer;
   z-index: 10;
-  font-size: 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  z-index: 10; /* Asegura que los botones estén por encima de las imágenes */
 }
 
 .prev-button {
@@ -38,4 +40,38 @@
 
 .next-button {
   right: 10px;
+}
+
+
+/* Media Queries para ajustar en diferentes tamaños de pantalla */
+@media (max-width: 768px) {
+  .slider-container {
+    width: 100%; /* Un poco más de ancho en tablets */
+  }
+
+  .prev-button,
+  .next-button {
+    padding: 8px 12px;
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-container {
+    width: 100%; /* Ocupa todo el ancho en móviles */
+    padding: 0 5px; /* Pequeño padding para que no se pegue a los bordes */
+  }
+
+
+  @media (max-width: 320px) {
+  .slider-container {
+    width: 100%; /* Un poco más de ancho en tablets */
+  }
+  }
+
+  .prev-button,
+  .next-button {
+    padding: 5px 8px;
+    font-size: 1em;
+  }
 }

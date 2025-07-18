@@ -8,7 +8,7 @@ import { SliderComponent } from "./slider/slider.component";
 import { MenuComponent } from './menu/menu.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { HeroComponent } from './hero/hero.component';
-import { ProjectsComponent } from './projects/projects.component';
+
 import { FooterComponent } from './footer/footer.component';
 
 
