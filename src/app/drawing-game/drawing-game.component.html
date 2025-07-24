@@ -1,0 +1,24 @@
+<p>drawing-game works!</p>
+<div class="container">
+  <div class="controls">
+    <label>Shape:
+      <select [(ngModel)]="selectedShape">
+        <option value="line">Free Draw</option>
+        <option value="circle">Circle</option>
+        <option value="rectangle">Rectangle</option>
+      </select>
+    </label>
+    <label>Color:
+      <input type="color" [(ngModel)]="color">
+    </label>
+    <label>Stroke Width:
+      <input type="number" [(ngModel)]="strokeWidth" min="1" max="20">
+    </label>
+    <button (click)="clearCanvas()">Clear Canvas</button>
+    <button (click)="saveScenario()">Save Scenario</button>
+    <label>Load Scenario:
+      <input type="file" (change)="loadScenario($event)" accept=".json">
+    </label>
+  </div>
+  <div id="canvas-container"></div>
+</div>

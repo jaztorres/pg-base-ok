@@ -10,12 +10,13 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { HeroComponent } from './hero/hero.component';
 
 import { FooterComponent } from './footer/footer.component';
+import { DrawingGameComponent } from './drawing-game/drawing-game.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,NavbarComponent, ],
+  imports: [RouterOutlet,NavbarComponent,DrawingGameComponent,Navbar2Component ],
 templateUrl: './app.component.html',
 styleUrls: ['./app.component.css']
 })

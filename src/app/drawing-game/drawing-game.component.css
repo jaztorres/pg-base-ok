@@ -1,0 +1,21 @@
+.container {
+  padding: 20px;
+  text-align: center;
+}
+
+.controls {
+  margin-bottom: 10px;
+}
+
+.controls label {
+  margin-right: 15px;
+}
+
+.controls select, .controls input {
+  margin-left: 5px;
+}
+
+#canvas-container {
+  border: 1px solid #ccc;
+  margin: 0 auto;
+}
